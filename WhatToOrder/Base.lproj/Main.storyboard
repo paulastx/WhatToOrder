@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatToOrder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-x0-WFq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpN-Fe-ogJ" userLabel="Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="143.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que vamos comer hoje?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-W4-Kg5">
+                                                <rect key="frame" x="42.666666666666657" y="52.333333333333343" width="329" height="39"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                                <color key="textColor" red="0.9882352941176471" green="0.32941176470588235" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="k8c-W4-Kg5" firstAttribute="centerXWithinMargins" secondItem="RpN-Fe-ogJ" secondAttribute="centerX" id="h9A-2B-fsP"/>
+                                            <constraint firstItem="k8c-W4-Kg5" firstAttribute="centerY" secondItem="RpN-Fe-ogJ" secondAttribute="centerY" id="rlv-Vj-I1F"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n40-00-2Qc" userLabel="Middle">
+                                        <rect key="frame" x="0.0" y="144.33333333333334" width="414" height="437.33333333333326"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pergunta" translatesAutoresizingMaskIntoConstraints="NO" id="PMu-jH-GV3">
+                                                <rect key="frame" x="36.666666666666657" y="83.666666666666657" width="341" height="270"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="270" id="5fZ-qZ-Hye"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PMu-jH-GV3" firstAttribute="centerX" secondItem="n40-00-2Qc" secondAttribute="centerX" id="fJ9-ov-XAT"/>
+                                            <constraint firstItem="PMu-jH-GV3" firstAttribute="centerY" secondItem="n40-00-2Qc" secondAttribute="centerY" id="w7b-f2-VpO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6t-x2-4zS" userLabel="Bottom">
+                                        <rect key="frame" x="0.0" y="582.66666666666663" width="414" height="153.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbt-x3-oBt">
+                                                <rect key="frame" x="57" y="52.666666666666742" width="300" height="48"/>
+                                                <color key="backgroundColor" red="1" green="0.51372549020000002" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="WlJ-Nn-dys"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="ESCOLHER">
+                                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pickPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyV-Fz-9kp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vbt-x3-oBt" firstAttribute="centerX" secondItem="S6t-x2-4zS" secondAttribute="centerX" id="FD5-qo-Gt9"/>
+                                            <constraint firstItem="vbt-x3-oBt" firstAttribute="centerY" secondItem="S6t-x2-4zS" secondAttribute="centerY" id="T4p-Qn-ySf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.88995250171383489" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7sN-x0-WFq" secondAttribute="bottom" id="C3T-IL-7Lc"/>
+                            <constraint firstItem="7sN-x0-WFq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KqC-W0-5X5"/>
+                            <constraint firstItem="7sN-x0-WFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ugx-Z9-e1x"/>
+                            <constraint firstItem="7sN-x0-WFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d7b-67-q9L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodChoice" destination="PMu-jH-GV3" id="Ll0-af-Nzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="66.666666666666671"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pergunta" width="341" height="341"/>
+    </resources>
 </document>

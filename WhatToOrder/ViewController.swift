@@ -9,10 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var foodChoice: UIImageView!
+    
+    let foodies = [#imageLiteral(resourceName: "passaporte"), #imageLiteral(resourceName: "brownie"), #imageLiteral(resourceName: "pizza"), #imageLiteral(resourceName: "bolo"), #imageLiteral(resourceName: "salada"), #imageLiteral(resourceName: "hamburguer"), #imageLiteral(resourceName: "sushi")]
+    
+    
+    @IBAction func pickPress(_ sender: UIButton) {
+        
+        foodChoice.image = foodies.randomElement()
     }
+    
 
 
 }
